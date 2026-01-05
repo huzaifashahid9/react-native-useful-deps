@@ -117,7 +117,7 @@ MIT
 
 ## 👨‍💻 Author
 
-Your Name
+Huzaifa Shahid
 
 ---
 
