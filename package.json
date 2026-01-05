@@ -7,7 +7,8 @@
     "rn-install-deps": "./cli.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node -c index.js && node -c cli.js && echo 'All tests passed!'",
+    "validate": "npm pack --dry-run"
   },
   "keywords": [
     "react-native",
@@ -30,10 +31,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/react-native-useful-deps.git"
+    "url": "https://github.com/huzaifashahid9/react-native-useful-deps.git"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/react-native-useful-deps/issues"
+    "url": "https://github.com/huzaifashahid9/react-native-useful-deps/issues"
   },
-  "homepage": "https://github.com/yourusername/react-native-useful-deps#readme"
+  "homepage": "https://github.com/huzaifashahid9/react-native-useful-deps#readme"
 }
