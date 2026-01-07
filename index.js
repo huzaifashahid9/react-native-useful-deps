@@ -10,6 +10,7 @@ const dependencies = [
   '@react-navigation/drawer',
   '@react-navigation/native',
   '@react-navigation/native-stack',
+  '@reduxjs/toolkit',
   'axios',
   'formik',
   'react-native-fast-image',
@@ -24,6 +25,7 @@ const dependencies = [
   'react-native-size-matters',
   'react-native-vector-icons',
   'react-native-video',
+  'react-redux',
   'rn-range-slider',
   'yup'
 ];

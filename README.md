@@ -48,6 +48,10 @@ This tool automatically installs the following popular React Native packages wit
 - `formik`
 - `yup`
 
+### State Management
+- `@reduxjs/toolkit`
+- `react-redux`
+
 ### Utilities
 - `axios`
 - `@react-native-async-storage/async-storage`
