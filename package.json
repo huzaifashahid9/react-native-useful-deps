@@ -1,6 +1,6 @@
 {
   "name": "react-native-useful-deps",
-  "version": "4.0.1",
+  "version": "4.1.0",
   "description": "CLI tool to automatically install commonly used React Native libraries with their latest versions",
   "main": "index.js",
   "bin": {
