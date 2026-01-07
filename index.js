@@ -23,6 +23,7 @@ const dependencies = [
   'react-native-safe-area-context',
   'react-native-screens',
   'react-native-size-matters',
+  'react-native-toast-message',
   'react-native-vector-icons',
   'react-native-video',
   'react-redux',
