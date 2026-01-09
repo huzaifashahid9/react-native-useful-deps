@@ -157,7 +157,7 @@ After installation, some packages may require additional configuration:
 
 ### For iOS (macOS only):
 ```bash
-npx pod-install
+pod install
 ```
 
 ### React Native Reanimated
