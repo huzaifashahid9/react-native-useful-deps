@@ -1,6 +1,5 @@
 const axios = require('axios');
 
-// List of commonly used React Native dependencies
 const dependencies = [
   '@gorhom/bottom-sheet',
   '@react-native-async-storage/async-storage',
@@ -20,6 +19,7 @@ const dependencies = [
   'react-native-maps',
   'react-native-modal',
   'react-native-reanimated',
+  'react-native-worklets',
   'react-native-safe-area-context',
   'react-native-screens',
   'react-native-size-matters',

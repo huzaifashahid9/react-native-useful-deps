@@ -1,4 +1,3 @@
-// Component templates for project scaffolding
 
 const templates = {
   customButton: `import React from 'react';

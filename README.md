@@ -164,8 +164,8 @@ npx pod-install
 Add the Reanimated plugin to your `babel.config.js`:
 ```javascript
 module.exports = {
-  presets: ['module:metro-react-native-babel-preset'],
-  plugins: ['react-native-reanimated/plugin'],
+  presets: ['module:@react-native/babel-preset'],
+  plugins: ['react-native-worklets/plugin',]
 };
 ```
 

@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 
 const { execSync } = require('child_process');
 const { dependencies, fetchLatestVersions } = require('./index');
@@ -8,7 +7,7 @@ const fs = require('fs');
 const path = require('path');
 const templates = require('./templates');
 
-console.log(chalk.cyan.bold('\n🚀 React Native Useful Dependencies Installer\n'));
+console.log(chalk.cyan.bold('\nReact Native Useful Dependencies Installer\n'));
 
 const spinner = ora('Fetching latest versions from npm...').start();
 
@@ -18,12 +17,11 @@ const spinner = ora('Fetching latest versions from npm...').start();
     const versions = await fetchLatestVersions();
     spinner.succeed('Latest versions fetched successfully!');
 
-    // Create install command
     const packagesToInstall = dependencies.map(dep => {
       return `${dep}@${versions[dep]}`;
     }).join(' ');
 
-    console.log(chalk.yellow('\n📦 Installing the following packages:\n'));
+    console.log(chalk.yellow('\nInstalling the following packages:\n'));
     dependencies.forEach(dep => {
       console.log(chalk.gray(`  • ${dep}@${versions[dep]}`));
     });
@@ -35,7 +33,6 @@ const spinner = ora('Fetching latest versions from npm...').start();
     try {
       // Detect package manager
       const useYarn = checkYarnAvailable();
-      const packageManager = useYarn ? 'yarn' : 'npm';
       
       if (useYarn) {
         installSpinner.text = 'Installing packages with Yarn...';
@@ -45,21 +42,21 @@ const spinner = ora('Fetching latest versions from npm...').start();
         execSync(`npm install ${packagesToInstall}`, { stdio: 'inherit' });
       }
 
-      installSpinner.succeed(chalk.green('✅ All dependencies installed successfully!'));
+      installSpinner.succeed(chalk.green('All dependencies installed successfully!'));
       
       // Create folder structure
-      console.log(chalk.yellow('\n📁 Creating project structure...\n'));
+      console.log(chalk.yellow('\nCreating project structure...\n'));
       const folderSpinner = ora('Setting up folders and components...').start();
       
       try {
         createProjectStructure();
-        folderSpinner.succeed(chalk.green('✅ Project structure created successfully!'));
+        folderSpinner.succeed(chalk.green('Project structure created successfully!'));
       } catch (error) {
         folderSpinner.fail('Failed to create project structure');
         console.error(chalk.red('Error:'), error.message);
       }
       
-      console.log(chalk.cyan.bold('\n🎉 Setup Complete!\n'));
+      console.log(chalk.cyan.bold('\nSetup Complete!\n'));
       console.log(chalk.gray('Note: Some packages may require additional setup:'));
       console.log(chalk.gray('  • Run `npx pod-install` for iOS dependencies'));
       console.log(chalk.gray('  • Follow setup instructions for react-native-vector-icons'));
@@ -67,13 +64,13 @@ const spinner = ora('Fetching latest versions from npm...').start();
 
     } catch (error) {
       installSpinner.fail('Failed to install dependencies');
-      console.error(chalk.red('\n❌ Installation failed:'), error.message);
+      console.error(chalk.red('\nInstallation failed:'), error.message);
       process.exit(1);
     }
 
   } catch (error) {
     spinner.fail('Failed to fetch package versions');
-    console.error(chalk.red('\n❌ Error:'), error.message);
+    console.error(chalk.red('\nError:'), error.message);
     process.exit(1);
   }
 })();
