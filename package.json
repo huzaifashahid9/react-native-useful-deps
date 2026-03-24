@@ -4,8 +4,8 @@
   "description": "CLI tool to automatically install commonly used React Native libraries with their latest versions",
   "main": "index.js",
   "bin": {
-    "react-native-useful-deps": "./cli.js",
-    "rn-install-deps": "./cli.js"
+    "react-native-useful-deps": "cli.js",
+    "rn-install-deps": "cli.js"
   },
   "scripts": {
     "test": "node -c index.js && node -c cli.js && echo 'All tests passed!'",
